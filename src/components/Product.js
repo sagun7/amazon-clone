@@ -10,6 +10,8 @@ const Product = ({id, title, price, description, category, image}) => {
         Math.floor(Math.random()*(MAX_RATING - MIN_RATING +1)) + MIN_RATING
     );
 
+    const [hasPrime] = useState(Math.random()<0.5)
+
   return (
     <div>
         <p>{category}</p>
@@ -30,6 +32,7 @@ const Product = ({id, title, price, description, category, image}) => {
                 )}
             
         </div>
+       <p>{description}</p>
         
     </div>
   )
